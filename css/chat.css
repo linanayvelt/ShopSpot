@@ -1,0 +1,144 @@
+#conversationsb{
+  display: inline-block;
+  float: left;
+  width: 300px;
+  border-right: 1px solid #e1e5e8;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#messagesb{
+  display: table;
+  float: right;
+  background: white;
+}
+
+.cmessage{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.tmessage{
+  height: 30px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+              0 2px 4px rgba(0,0,0,0.05),
+              0 4px 6px rgba(0,0,0,0.05),
+              0 6px 10px rgba(0,0,0,0.05),
+              0 8px 18px rgba(0,0,0,0.05);
+}
+
+.imessage{
+  display: inline-block;
+  float: left;
+  resize: none;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 9px 15px 6px 15px;
+	font-family: 'Nunito Sans', sans-serif;
+	color: #dce0e3;
+	border: 1px solid rgba(0,0,0,0.3);
+}
+
+.cbinput .blue-b{
+  display: inline-block;
+  float: left;
+  margin: 10px 0px 0px 0px;
+}
+
+/* .rmessage{
+  width: 200px;
+  clear:both;
+} */
+
+.message{
+  margin-top: 5px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  clear: both;
+}
+
+.user1{
+  float: right;
+  margin-right: 10px;
+  background: #1418ff;
+  color: white;
+}
+
+.user2{
+  float: left;
+  margin-left: 10px;
+  background: #e9ecef;
+  color: #495057;
+}
+
+.ddate{
+  color: #868e96;
+  opacity: 0.5;
+  font-size: 12px;
+  padding: 30px 0px 5px 0px;
+}
+
+.ddate p{
+  display: inline-block;
+  float: left;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.cuser:first-child{
+  margin: 3px 3px 0px 3px;
+}
+
+.cuser{
+  height: 60px;
+  padding: 13px 15px 5px 10px;
+  margin: 0px 3px 0px 3px;
+  border-radius: 5px;
+  border-bottom: 1px solid #e1e5e8;
+  cursor: default;
+}
+
+.cuser .cnames{
+  color: #495057;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cuser .ccontext{
+  color: #868e96;
+  font-size: 12px;
+}
+
+.cuser .cusername{
+  color: #868e96;
+  font-weight: 500 !important;
+}
+
+.cuser .cdate{
+  float: right;
+  color: #495057;
+  font-weight: 500 !important;
+  font-size: 12px;
+}
+
+.cuser .status{
+  float: left;
+  height: 40px;
+  width: 10px;
+  margin: 0px 10px 0px 0px;
+  /* background-image: url("../blue-circle-fill.svg"); */
+  /* background-image: url("../white-circle-fill.svg"); */
+  opacity: 0.9;
+	background-size: 10px 10px;
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+}
+
+.cwhite{
+  background-image: url("../white-circle-fill.svg");
+}
+
+.cblue{
+  background-image: url("../blue-circle-fill.svg");
+}

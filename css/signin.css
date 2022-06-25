@@ -1,0 +1,100 @@
+@charset "UTF-8";
+#fcenter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#gradient-canvas {
+	position: absolute;
+	width: 100%;
+  --gradient-color-1: #030699;
+  --gradient-color-2: #4f53ff;
+  --gradient-color-3: #1418ff;
+  --gradient-color-4: #b1bec9;
+  z-index:-100;
+	opacity: 0.4;
+}
+
+#box{
+	width:  400px;
+	margin: 10px;
+	padding: 85px 30px 40px 30px;
+	background: white;
+	border-radius: 20px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.02),
+              0 2px 2px rgba(0,0,0,0.02),
+              0 4px 4px rgba(0,0,0,0.02),
+              0 6px 8px rgba(0,0,0,0.02),
+              0 8px 16px rgba(0,0,0,0.02);
+}
+
+#fcenter .mediumf{
+	font-weight: 600;
+}
+
+#fcenter .smallf{
+	display: inline-block;
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+	font-weight: 400;
+}
+
+#fcenter input{
+	width: 100%;
+	height: 40px;
+	border-radius: 10px;
+	margin-top: 5px;
+	padding: 9px 15px 6px 15px;
+	color: #e9ecef;
+	border: 1px solid rgba(0,0,0,0.08);
+}
+
+#inputName{
+	display: inline-block !important;
+	float: left !important;
+	width: 49% !important;
+	margin: 0px 5px 0px 0px;
+}
+
+#inputLastName{
+	display: inline-block !important;
+	float: left !important;
+	width: 49% !important;
+}
+
+#fcenter input:focus{
+	border: 1px solid rgba(0,0,0,0.04);
+}
+
+#fcenter .blue-b{
+	display: block;
+	height: 40px;
+	width: 100%;
+	margin-top: 20px;
+}
+
+#fcenter .grey-b{
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 50%;
+	padding: 5px 13px 5px 10px;
+	transform: translateX(-50%);
+	background-image: none;
+	background-size: none;
+	background-repeat: no-repeat;
+	background-position: none;
+}
+
+/*.grey-b:hover {border: 1px solid #868e96}*/
+
+#fcenter .grey-b:hover{
+	padding: 5px 13px 5px 10px;
+	background-image: none;
+	background-size: none;
+	background-repeat: no-repeat;
+	background-position: none;
+	font-weight: 600;
+}

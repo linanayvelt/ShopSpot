@@ -1,0 +1,265 @@
+@charset "UTF-8";
+/* Banner CSS */
+
+#marketbanner{
+	display: table;
+	width: 100%;
+	height: 150px;
+	padding: 40px 40px 40px 40px;
+}
+
+.channelr{
+	display: table-row;
+}
+
+.channelr .largef{
+	display: inline-block;
+	float: left;
+	margin: 3px 20px 0px 0px;
+	font-weight: 900;
+	color: #495057;
+}
+
+.channelr img{
+	display: inline-block;
+	float: left;
+	border-radius: 30px !important;
+	margin: 0px 20px 0px 0px;
+}
+
+.channelr .blue-b{
+	display: inline-block;
+	float: left;
+	margin: 7px 0px 0px 0px;
+	font-weight: 300;
+}
+
+.channelr .tinyf{
+	display: block;
+	float: left;
+	margin: -15px 0px 0px 80px;
+	color: #495057;
+}
+
+.channelr .tab{
+	margin: 40px 10px 0px 0px;
+	padding: 7px 40px 7px 40px;
+	border: 1px solid #f7f9ff;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	background: #f7f9ff;
+	color: #868e96;
+}
+
+.channelr #posts{
+	position: relative;
+	z-index: 998;
+	box-shadow:  5px 5px 9px #c4c6cb,
+             -5px -5px 9px #ffffff;
+}
+
+.channelr #requests{
+	position: relative;
+	z-index: 997;
+	background: #f2f4fa;
+	border: 1px solid #f2f4fa;
+	box-shadow:  5px 5px 9px #e1e3e8,
+             -5px -5px 9px #ffffff;
+}
+
+.channelr #backtoedit{
+	display: block;
+	height: 40px;
+	width: 100% ;
+	margin-top: 60px;
+}
+
+@media only screen and (max-width: 607px) {
+.channelr img{
+	display: table-row;
+	float: none;
+	margin: 0px 0px 20px 0px;
+}
+.channelr .largef{
+	display: table-row;
+	float: none;
+	margin: 0px 0px 0px 0px;
+}
+.channelr .tinyf{
+	display: block;
+	float: left;
+	margin: 20px 0px 0px 0px;
+}
+.channelr .tab{
+	margin: 40px 10px 0px 0px;
+	padding: 7px 45px 7px 45px;
+}
+}
+
+/* Container CSS */
+#fmarket, #fpreview{
+	display: table;
+	position: absolute;
+	top: 100px;
+	z-index: 1001;
+	width: 80%;
+	max-width: 900px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	background: white;
+	border-radius: 20px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.02),
+              0 2px 2px rgba(0,0,0,0.02),
+              0 4px 4px rgba(0,0,0,0.02),
+              0 6px 8px rgba(0,0,0,0.02),
+              0 8px 16px rgba(0,0,0,0.02);
+}
+
+#fmarket p, #fmarket label, #fpreview p, #fpreview label{
+	color: #495057;
+}
+
+#fmarket form{
+	padding: 30px 30px 40px 30px;
+}
+
+#fmarket .mediumf, #fpreview .mediumf{
+	font-weight: 600;
+}
+
+#fpreview{
+	left: 100%;
+}
+
+.cbox{
+	display: inline-block;
+	position: relative;
+	float: left;
+	width: 70%;
+}
+
+.cimage{
+	display: inline-block;
+	position: relative;
+	float: right;
+	width: 200px;
+	padding: 10px 0px 0px 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+	.cbox{
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.cbox{
+		width: 100%;
+	}
+
+	.cimage{
+		float: left;
+		width: 200px;
+	}
+}
+
+#fmarket .smallf{
+	display: block;
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+#fmarket .tinyf{
+	display: table-row;
+	width: 100%;
+	font-size: 11px;
+	float: left;
+}
+
+#fmarket input, #fmarket textarea{
+	width: 100%;
+	height: 40px;
+	border-radius: 10px;
+	margin-top: 5px;
+	padding: 9px 15px 6px 15px;
+	font-family: 'Nunito Sans', sans-serif;
+	color: #dce0e3;
+	border: 1px solid rgba(0,0,0,0.3);
+}
+
+#fmarket select{
+	width: 100%;
+	height: 40px;
+	border-radius: 10px;
+	margin-top: 5px;
+	padding: 9px 15px 6px 15px;
+	color: #495057;
+	border: 1px solid rgba(0,0,0,0.3);
+}
+
+#fmarket #inputPrice::-webkit-inner-spin-button,
+#fmarket #inputPrice::-webkit-outer-spin-button {
+   opacity: 1;
+}
+
+#inputMarketname{
+	width: 200px !important;
+}
+
+#inputMarketdescription{
+	min-height: 80px !important;
+	max-height: 250px !important;
+	max-width: 600px !important;
+}
+
+#hashtags .hashtag, #rhashtags .hashtag{
+  display: inline-block;
+	position: relative;
+	float: left;
+	height: 27px;
+	border-radius: 10px;
+	font-family: 'Nunito Sans', sans-serif;
+	margin: 8px 7px 0px 0px;
+	padding: 6px 10px 5px 0px;
+	background: #1418ff;
+	font-weight: 500;
+	font-size: 12px;
+	color: white;
+}
+
+.hashtag .cross{
+	display: inline-block;
+	float: left;
+	height: 13px;
+	width: 15px;
+	margin: 1px 3px 0px 3px;
+	background-image: url("../soft-cross.svg");
+	background-size: 13px 13px;
+	background-repeat: no-repeat;
+}
+
+.hashtag span{
+	display: inline-block;
+	float: left;
+}
+
+#fmarket .blue-b{
+	display: block;
+	height: 40px;
+	width: 100%;
+	margin-top: 60px;
+}
+
+#backtoedit, #createmarket{
+	display: inline-block;
+	position: relative;
+	float: left;
+	height: 40px;
+	width: 49%;
+	margin-top: 60px;
+	margin-left: 1%;
+}
