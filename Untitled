@@ -1,0 +1,117 @@
+
+var unused = ["inputRequestag1", "inputRequestag2", "inputRequestag3", "inputRequestag4", "inputRequestag5"];
+var used = [];
+$("#inputRequestags").keypress(function(event){
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+	if(keycode == '13'){
+		if($("#inputRequestags").val() !== "eg. aptextbook" && $("#inputRequestags").val() !== ""){
+			var stag = unused[0];
+			$("#hashtags").append("<div id=\"" + stag + "\" class=\"hashtag\"><div class=\"cross\"></div><span>" + $("#inputRequestags").val().trim() + "</span></div>");
+			$("#inputRequestags").val("");
+
+			used.push(stag);
+			unused.shift();
+		}
+	}
+	tagCheck();
+});
+
+$(document).on('mouseenter', '#inputRequestag1 .cross' ,function() {
+	$('#inputRequestag1').css('opacity', '0.7');
+});
+
+$(document).on('mouseleave', '#inputRequestag1 .cross' ,function() {
+	$('#inputRequestag1').css('opacity', '1');
+});
+
+$(document).on('click', '#inputRequestag1 .cross' ,function() {
+	$('#inputRequestag1').remove();
+	if(unused.indexOf('inputRequestag1') === -1){
+		unused.push('inputRequestag1');
+	}
+	var index = used.indexOf('inputRequestag1');
+	used.splice(index, 1);
+	tagCheck();
+});
+
+$(document).on('mouseenter', '#inputRequestag2 .cross' ,function() {
+	$('#inputRequestag2').css('opacity', '0.7');
+});
+
+$(document).on('mouseleave', '#inputRequestag2 .cross' ,function() {
+	$('#inputRequestag2').css('opacity', '1');
+});
+
+$(document).on('click', '#inputRequestag2 .cross' ,function() {
+	$('#inputRequestag2').remove();
+	if(unused.indexOf('inputRequestag2') === -1){
+		unused.push('inputRequestag2');
+	}
+	var index = used.indexOf('inputRequestag2');
+	used.splice(index, 1);
+	tagCheck();
+});
+
+$(document).on('mouseenter', '#inputRequestag3 .cross' ,function() {
+	$('#inputRequestag3').css('opacity', '0.7');
+});
+
+$(document).on('mouseleave', '#inputRequestag3 .cross' ,function() {
+	$('#inputRequestag3').css('opacity', '1');
+});
+
+$(document).on('click', '#inputRequestag3 .cross' ,function() {
+	$('#inputRequestag3').remove();
+	if(unused.indexOf('inputRequestag3') === -1){
+		unused.push('inputRequestag3');
+	}
+	var index = used.indexOf('inputRequestag3');
+	used.splice(index, 1);
+	tagCheck();
+});
+
+$(document).on('mouseenter', '#inputRequestag4 .cross' ,function() {
+	$('#inputRequestag4').css('opacity', '0.7');
+});
+
+$(document).on('mouseleave', '#inputRequestag4 .cross' ,function() {
+	$('#inputRequestag4').css('opacity', '1');
+});
+
+$(document).on('click', '#inputRequestag4 .cross' ,function() {
+	$('#inputRequestag4').remove();
+	if(unused.indexOf('inputRequestag4') === -1){
+		unused.push('inputRequestag4');
+	}
+	var index = used.indexOf('inputRequestag4');
+	used.splice(index, 1);
+	tagCheck();
+});
+
+$(document).on('mouseenter', '#inputRequestag5 .cross' ,function() {
+	$('#inputRequestag5').css('opacity', '0.7');
+});
+
+$(document).on('mouseleave', '#inputRequestag5 .cross' ,function() {
+	$('#inputRequestag5').css('opacity', '1');
+});
+
+$(document).on('click', '#inputRequestag5 .cross' ,function() {
+	$('#inputRequestag5').remove();
+	if(unused.indexOf('inputRequestag5') === -1){
+		unused.push('inputRequestag5');
+	}
+	var index = used.indexOf('inputRequestag5');
+	used.splice(index, 1);
+	tagCheck();
+});
+
+function tagCheck(){
+	if(unused.length === 0){
+		$("#inputRequestags").attr("readonly", true);
+		$("#inputRequestags").css('background', '#e9ecef');
+	} else {
+		$("#inputRequestags").attr("readonly", false);
+		$("#inputRequestags").css('background', 'white');
+	}
+}

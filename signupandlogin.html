@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sign In.</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2 family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="css/main_elements.css" rel="stylesheet" type="text/css">
+    <link href="css/signin.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header id="userdiv">
+  		<img src="Screen Shot 2021-04-29 at 7.19.35 PM.png" width="250" height="40" alt=""/>
+  		<button type="button" id="howtouse" class="medium-b grey-b">How to use Nearbuy?</button>
+  	</header>
+    <canvas id="gradient-canvas">
+    </canvas>
+    <div id="fcenter">
+      <div id="box">
+      <div id="fsignup">
+        <form id="signupform">
+    		<p class="mediumf">Sign In.</p>
+              <p>
+                <label for="inputName" class="smallf">Name:</label>
+                <input type="text" name="name" id="inputName" value="First">
+              </p>
+              <p>
+                <input type="text" name="lastname" id="inputLastName" value="Last">
+              </p>
+              <p>
+                <label for="inputUsername" class="smallf">Username:</label>
+                <input type="text" name="username" id="inputUsername" value="eg. linanayvelt">
+              </p>
+              <p>
+                <label for="inputEmail" class="smallf">Email:</label>
+                <input type="email" name="email" id="inputEmail" value="lina@nayvelt.com">
+              </p>
+              <p>
+                <label for="inputPassword" class="smallf">Password:</label>
+                <input type="password" name="password" id="inputPassword">
+              </p>
+              <p>
+                <label for="inputComfirmPassword" class="smallf">Confirm Password:</label>
+                <input type="password" name="confirmpassword" id="inputConfirmPassword">
+              </p>
+              <div id="errors"></div>
+            <button type="button" class="medium-b blue-b" id="signupbutton">Sign Up</button>
+            </form>
+            <button type="button" class="medium-b grey-b" id="floginb">Have an account? Log In</button>
+      </div>
+
+      <div id="flogin">
+		<p class="mediumf">Log In to Nearbuy.</p>
+        <p>
+          <label for="inputUsernameorEmail" class="smallf">Username or Email:</label>
+          <input type="text" name="usernameoremail" id="inputUsernameorEmail" value="@linanayvelt or lina@gmail.com">
+        </p>
+        <p>
+          <label for="inputLoginPassword" class="smallf">Password:</label>
+          <input type="password" name="loginpassword" id="inputLoginPassword">
+        </p>
+        <div id="loginerrors"></div>
+        <button type="button" class="medium-b blue-b" id="loginbutton">Log In</button>
+        <button type="button" class="medium-b grey-b" id="fsignupb">Don't have an account? Sign Up</button>
+      </div>
+      </div>
+      </div>
+
+      <script src="js/signup.js"></script>
+      <script src="js/login.js"></script>
+      <script src="js/banner_animation.js"></script>
+      <script src="market_animations.js"></script>
+  </body>
+</html>

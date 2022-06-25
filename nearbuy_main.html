@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nearbuy</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2 family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="css/nearbuy_main.css" rel="stylesheet" type="text/css">
+<link href="css/main_elements.css" rel="stylesheet" type="text/css">
+<script src="js/nearbuy_main.js"></script>
+</head>
+
+<body>
+	<header id="userdiv">
+		<img src="Screen Shot 2021-04-29 at 7.19.35 PM.png" width="250" height="40" alt=""/>
+		<button type="button" id="howtouse" class="medium-b grey-b">How to use Nearbuy?</button>
+		<button type="button" id="userlogin" class="medium-b blue-b">Sign In</button>
+	</header>
+	<!-- <header id="userdiv">
+		<img src="Screen Shot 2021-04-29 at 7.19.35 PM.png" width="250" height="40" alt=""/>
+		<button type="button" id="howtouse" class="medium-b grey-b">How to use Nearbuy?</button>
+		<div id="bcenter">
+			<button type="button" id="home" class="medium-b clear-b">Home</button>
+			<button type="button" id="search" class="medium-b clear-b">Search</button>
+			<button type="button" id="messages" class="medium-b clear-b">Messages</button>
+		</div>
+		<button type="button" id="userprofile" class="medium-b blue-b">@linanayvelt</button>
+		<div id="pmenu">
+			<button type="button" id="userviewprofile" class="medium-b clear-b">View Profile</button>
+			<button type="button" id="userposts" class="medium-b clear-b">My Posts</button>
+			<button type="button" id="usermessages" class="medium-b clear-b">Messages</button>
+			<button type="button" id="userlogout" class="medium-b clear-b">Log Out</button>
+		</div>
+	</header> -->
+<canvas id="gradient-canvas">
+</canvas>
+<div id="banner">
+		<h1 class="bigf">Buy local.</h1>
+		<h1 class="bigf italic">Sell local.</h1>
+    <div id="csearch">
+  		<input type="text" class="smallf" id="filterInput" value="Seach by name, keyword, etc..."/>
+  		<div id="searchtop5"></div>
+    </div>
+	</div>
+	<div id="nearchannels">
+		<div id="marketlist">
+			<p class="mediumf">Top Channels.</p>
+		</div>
+	</div>
+	<script src="market_animations.js"></script>
+	<script src="js/banner_animation.js"></script>
+	<script src="js/nearbuy_main_search.js"></script>
+	<script src="js/subscribe.js"></script>
+	<script src="js/userprofile.js"></script>
+</body>
+</html>

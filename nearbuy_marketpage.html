@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Nearbuy Market</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2 family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="css/image_filedrop.css" rel="stylesheet" type="text/css"/>
+    <link href="css/main_elements.css" rel="stylesheet" type="text/css">
+    <link href="css/nearbuy_marketpage.css" rel="stylesheet" type="text/css">
+    <script src="market_animations.js"></script>
+  </head>
+  <body>
+    <header id="userdiv">
+      <img src="Screen Shot 2021-04-29 at 7.19.35 PM.png" width="250" height="40" alt=""/>
+      <button type="button" id="howtouse" class="medium-b grey-b">How to use Nearbuy?</button>
+      <button type="button" id="userlogin" class="medium-b blue-b">Sign In</button>
+    </header>
+    <div id="marketbanner">
+    	<div class="channelr">
+    		<img src="image/red-house.svg" alt="" width="60" height="60">
+    		<p id="maintitle" class="largef"></p>
+    		<button class="medium-b blue-b subscribe-b">Subscribe</button>
+    	</div>
+    	<div class="channelr">
+    		<p class="tinyf">Followers: 1000</p>
+    	</div>
+    	<div id="tabgroup" class="channelr">
+    		<button class="tab tinyf" id="posts">Posts</button>
+    		<button class="tab tinyf" id="requests" >Requests</button>
+    	</div>
+    	</div>
+
+    <div id="newpost" class="modal">
+          <div id="rtpost">
+            <button class="tpost" id="itemb">Post Item</button>
+            <button class="tpost" id="requestb">Post Request</button>
+        </div>
+          <div id="fpost">
+            <form action="" method="POST" enctype="multipart/form-data">
+              <p class="mediumf">Post Your Item.</p>
+              <p class="ctitle cbox">
+                <label for="inputTitle" class="smallf">Title</label>
+                <input type="text" name="title" id="inputTitle" value="eg. Pearson Chemistry 12">
+                <label class="tinyf">max. 20 characters</label>
+              </p>
+              <p class="cprice cbox">
+                <label for="inputPrice" class="smallf">Price</label>
+                <input type="number" name="price" id="inputPrice" min="0" value="0" step="0.01">
+              </p>
+              <p class="cquality cbox">
+                <label for="inputQuality" class="smallf">Quality</label>
+                <select name="quality" id="inputQuality">
+                <option value="New">New</option>
+                <option value="Slightly Used">Slightly Used</option>
+                <option value="used">Used</option>
+                <option value="veryused">Very Used</option>
+                </select>
+              </p>
+              <p>
+                <label for="inputAdditionalInformation" class="smallf">Additional Information </label>
+                <textarea type="text" name="additionalinformation" id="inputAdditionalInformation" rows="3">Are there notes in the book? Missing pages? Describe here.</textarea>
+              <label class="tinyf">max. 500 characters</label>
+              </p>
+              <label class="smallf">Upload up to 3 images. </label>
+              <div class="drop-zone">
+                <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                <input type="file" name="image1" class="drop-zone__input" accept="image/*">
+              </div>
+              <div class="drop-zone">
+                <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                <input type="file" name="image2" class="drop-zone__input" accept="image/*">
+              </div>
+              <div class="drop-zone">
+                <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                <input type="file" name="image3" class="drop-zone__input" accept="image/*">
+              </div>
+              <div id="chastag">
+                <p class="smallf">Enter Hashtags</p>
+                <div id="hashtags">
+                </div>
+              </div>
+              <input type="text" name="hashtags" id="inputTags" value="eg. aptextbook">
+              <label class="tinyf">max. 20 characters per tag</label>
+              <div id="createnewitemerrors"></div>
+              <button type="button" class="medium-b blue-b" id="createnewitembutton">Create New Post</button>
+          </form>
+            </div>
+        <div id="frequest">
+          <form id="requestpostform" action="" method="POST" enctype="multipart/form-data">
+              <p class="mediumf">Post Your Request.</p>
+              <p>
+                <label for="inputRequest">What are you looking for?</label>
+                <input type="text" name="request" id="inputRequest">
+                <label class="tinyf">max. 100 characters</label>
+              </p>
+              <div id="crhastag">
+                <p class="smallf">Enter Hashtags</p>
+                <div id="rhashtags">
+                </div>
+              </div>
+              <input type="text" name="hashtags" id="inputRequestags" value="eg. aptextbook">
+              <label class="tinyf">max. 20 characters per tag</label>
+              <div id="createnewrequesterrors"></div>
+              <button type="button" class="medium-b blue-b" id="createnewrequestbutton">Create New Post</button>
+          </form>
+            </div>
+    </div>
+
+      <div id="aitems">
+        <button class="medium-b blue-b">Create Post</button>
+        <form id="forganize">
+          <label for="organizeBy" class="tinyf">Organize by:</label>
+          <select name="organize" id="organizeBy">
+            <option value="LowtoHigh">Low to High</option>
+            <option value="HightoLow">High to Low</option>
+            <option value="NewestPost">Newest Post</option>
+            <option value="OldestPost">Oldest Post</option>
+          </select>
+            </form>
+      </div>
+    <div>
+      <div id="tabled">
+        	<div id="viewitem" class="modal">
+            <div class="imageh"><div id="mrarrow" class="arrow rarrow"></div><div id="mlarrow" class="arrow larrow"></div></div>
+            <div class="mrow"><p class="smallf title"></p><p class="tinyf username"></p></div>
+            <div class="mrow"><p class="tprice">Price:</p><p class="price"></p></div>
+            <div class="mrow"><p class="tquality">Quality:</p><p class="quality"></p></div>
+            <div class="mrow"><p class="tdetails">Details:</p><p class="details"></p></div>
+            <div id="mhashtags"></div>
+            <form action="" method="POST" id="" enctype="multipart/form-data"><input type="text" name="message" value="Hey! I would like to buy this item."></form>
+            <button class="small-b blue-b">Message</button>
+          </div>
+  			<div id="searchc">
+  				<input type="text" class="tinyf" value="search">
+  			</div>
+      <div id="itemc">
+        <div id="center">
+        </div>
+      </div>
+      <div id="requestc">
+			</div>
+    </div>
+
+      <!-- <script src="js/market_item_search.js"></script>
+      <script src="js/market_request_search.js"></script> -->
+      <!-- <script src="js/item_filter.js"></script> -->
+      <script src="js/market_createnewitempost.js"></script>
+      <script src="js/market_createnewrequestpost.js"></script>
+      <script src="market_animations.js"></script>
+      <script src="js/load_market.js"></script>
+      <script src="js/subscribe.js"></script>
+      <script src="js/userprofile.js"></script>
+      <script src="js/image_filedrop.js"></script>
+    </div>
+  </body>
+</html>
